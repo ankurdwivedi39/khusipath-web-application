@@ -15,9 +15,11 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
     /* background-color: #f9f5f0; */
-     background: linear-gradient(135deg, #def198 , #db232300);
+     /* background: linear-gradient(135deg, #def198 , #db232300); */
+      /* background: url(back_ima.png);  */
+       background-color: rgb(245, 53, 53);
     color: #333;
     line-height: 1.6;
 }
@@ -90,7 +92,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
-                url('https://placehold.co/1920x1080') center/cover;
+                 center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,9 +183,71 @@ body {
     color: var(--dark);
 }
 
+body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .features-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .features-section h2 {
+      text-align: left;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #2d3748;
+    }
+
+    .features-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+
+    .feature-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #1a202c;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
 .testimonials {
     padding: 5rem 2rem;
-    background-color: #f9f5f0;
+    /* background-color: #f9f5f0; */
+    
+    
+       background-color: rgb(236, 204, 204);
+    color: #333;
+    line-height: 1.6;
 }
 
 .testimonial-slider {
@@ -194,7 +258,7 @@ body {
 
 .testimonial {
     background-color: white;
-    padding: 2rem;
+     /* background-color: rgb(245, 53, 53); */
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     margin: 0 1rem;
