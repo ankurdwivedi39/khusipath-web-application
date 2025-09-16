@@ -329,18 +329,30 @@ footer {
     margin-top: 2rem;
 }
 
-.social-icons a i {
-  font-size: 30px;           /* Size of each icon */
-  color: #fff;               /* Default icon color */
-  margin: 0 12px;            /* Horizontal spacing */
-  transition: 0.3s ease;     /* Smooth hover effect */
+<style>
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-/* Hover effect */
-.social-icons a i:hover {
-  color: #007bff;            /* Blue color on hover */
-  transform: scale(1.2);     /* Zoom on hover */
+.social-icons a i {
+  font-size: 30px;
+  transition: 0.3s ease;
 }
+
+/* Default colors */
+.fa-facebook { color: #6a84bc; }
+.fa-instagram { color: #6a84bc; }
+.fa-x-twitter { color: #6a84bc; }
+.fa-youtube { color: #6a84bc; }
+
+/* Hover colors */
+.fa-facebook:hover { color: #0952f0; }
+.fa-instagram:hover { color: #eb1a7c; }
+.fa-x-twitter:hover { color: #01080c; }
+.fa-youtube:hover { color: #ff0000; }
+</style>
+
 
 .copyright {
     margin-top: 3rem;
