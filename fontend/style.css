@@ -329,21 +329,30 @@ footer {
     margin-top: 2rem;
 }
 
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
+<style>
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-.social-icon:hover {
-    background-color: var(--primary);
-    transform: translateY(-3px);
+.social-icons a i {
+  font-size: 30px;
+  transition: 0.3s ease;
 }
+
+/* Default colors */
+.fa-facebook { color: #6a84bc; }
+.fa-instagram { color: #6a84bc; }
+.fa-x-twitter { color: #6a84bc; }
+.fa-youtube { color: #6a84bc; }
+
+/* Hover colors */
+.fa-facebook:hover { color: #0952f0; }
+.fa-instagram:hover { color: #eb1a7c; }
+.fa-x-twitter:hover { color: #01080c; }
+.fa-youtube:hover { color: #ff0000; }
+</style>
+
 
 .copyright {
     margin-top: 3rem;
