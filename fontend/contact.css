@@ -14,7 +14,7 @@
 
 html, body {
   margin: 0;
-  padding: 0;
+  padding-top: 40px;
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
