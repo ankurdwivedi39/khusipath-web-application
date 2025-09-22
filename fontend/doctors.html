@@ -4,26 +4,255 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doctors - Khushipath</title>
-   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="doctors.css">
- 
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9faf5 , #fafafa);
+      color: #333;
+      line-height: 1.6;
+      padding-top: 90px; /* Adjust for fixed header height */
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header .logo h1 {
+      font-size: 1.5rem;
+      color: #003399;
+    }
+
+    .header .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .header .nav a {
+      text-decoration: none;
+      color: #003399;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .header .nav a:hover {
+      color: #16a34a;
+    }
+
+    /* Banner */
+    .banner {
+      text-align: center;
+      padding: 60px 20px;
+      background: #def198;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      color: #003399;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      color: #475569;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 60px 10%;
+      background: #ffffff;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+
+    .about-text h2 span {
+      color: #16a34a;  /* Green highlight */
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #475569;
+    }
+
+    .about-image {
+      flex: 1 1 350px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Search */
+    .search-section {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .search-section input {
+      width: 50%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px 0 0 6px;
+    }
+
+    .search-section button {
+      padding: 10px 20px;
+      border: none;
+      background: #003399;
+      color: white;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    .search-section button:hover {
+      background: #001f66;
+    }
+
+    /* Doctors Grid */
+    .doctors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .doctor-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .doctor-card img {
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .doctor-card h3 {
+      color: #003399;
+      margin-bottom: 10px;
+    }
+
+    .doctor-card button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #003399;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    .footer {
+      background: #003399;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .search-section input {
+        width: 70%;
+      }
+
+      .header .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        padding: 10px;
+        border-radius: 6px;
+        display: none; /* You can add JS later for toggle */
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="image/khushipath logo.png" alt="Khushipath Logo - A simplified image of a person meditating under a tree" />
-            <h1>Khushipath</h1>
+      <img src="image/khushipath logo.png" alt="Khushipath Logo" style="height:50px;">
+      <h1>Khushipath</h1>
     </div>
     <nav class="nav">
-     <li><a href="Fp.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="test.html">Tests</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="doctors.html">Doctors</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login form.html">Login</a></li>
+      <ul>
+        <li><a href="Fp.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="test.html">Tests</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login form.html">Login</a></li>
+      </ul>
     </nav>
   </header>
 
